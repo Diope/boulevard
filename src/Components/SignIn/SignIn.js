@@ -4,6 +4,8 @@ import './SignIn.scss';
 import FormInput from '../FormInput/FormInput';
 import Button from '../Button/Button'
 
+import {signInWithGoogle} from '../../Firebase/firebase.utils'
+
 class SignIn extends Component {
     state = { 
         email: '',
@@ -33,6 +35,7 @@ class SignIn extends Component {
                     <FormInput name="password" value={this.state.password} handleChange={this.handleChange} required label="password"/>
 
                     <Button type="submit">Sign In</Button>
+                    <Button onClick={signInWithGoogle}>{''}Sign in with Google{''}</Button>
                 </form>
             </div>
         );

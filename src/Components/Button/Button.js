@@ -2,9 +2,9 @@ import React from "react";
 
 import "./Button.scss";
 
-const Button = ({ children, ...otherProps }) => {
+const Button = ({ children, isGoogle, ...otherProps }) => {
 	return (
-		<button className="Button" {...otherProps}>
+		<button className={`${isGoogle ? 'googleButton' : ''} Button`} {...otherProps}>
 			{children}
 		</button>
 	);

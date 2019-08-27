@@ -1,13 +1,14 @@
 import React from "react";
-import "./UserAccount.scss";
+import "./UserReg.scss";
 
 import SignIn from "../../Components/SignIn/SignIn";
+import SignUp from '../../Components/SignUp/SignUp'
 
 const UserAccount = () => {
 	return (
-		<div className="user-account">
-			SIGN IN
+		<div className="UserRegistration">
 			<SignIn />
+			<SignUp />
 		</div>
 	);
 };

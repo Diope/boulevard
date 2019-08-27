@@ -19,15 +19,44 @@ const auth = fb.auth();
 const db = fb.firestore();
 const currentUser = auth.currentUser;
 
+// Collections
+const userCollection = db.collection("users");
+
 const provider = new fb.auth.GoogleAuthProvider();
 provider.setCustomParameters({prompt: 'select_account'});
 
+
 const signInWithGoogle = () => auth.signInWithPopup(provider)
+const createUserProfile = async(userAuth, additionalData) => {
+    if (!userAuth) return;
+
+    const userRef = userCollection.doc(userAuth.uid);
+    const snapshop = await userRef.get()
+
+    if (!snapshop.exists) {
+        const {displayName, email} = userAuth;
+        const createdAt = new Date();
+
+        try {
+            await userRef.set({
+                displayName,
+                email,
+                createdAt,
+                ...additionalData
+            })
+        } catch (error) {
+            console.log('error creating user', error.message)
+        }
+    }
+
+    return userRef;
+}
 
 export {
     auth,
     db,
     currentUser,
-    signInWithGoogle
+    signInWithGoogle,
+    createUserProfile
 }
 

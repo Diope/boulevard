@@ -4,7 +4,7 @@ import './SignIn.scss';
 import FormInput from '../FormInput/FormInput';
 import Button from '../Button/Button'
 
-import {signInWithGoogle} from '../../Firebase/firebase.utils'
+import {signInWithGoogle, auth} from '../../Firebase/FirebaseConfig'
 
 class SignIn extends Component {
     state = { 
@@ -12,10 +12,17 @@ class SignIn extends Component {
         password: '' 
     }
 
-    handleSubmit = (e) => {
+    handleSubmit = async (e) => {
         e.preventDefault()
+        const {email, password} = this.state;
 
-        this.setState({email: '', password: ''})
+        try {
+            await auth.signInWithEmailAndPassword(email, password);
+            this.setState({email: '', password: ''})
+        } catch (error) {
+            console.log(error)
+        }
+
     }
 
     handleChange = (e) => {
@@ -32,7 +39,7 @@ class SignIn extends Component {
                 <form onSubmit={this.handleSubmit}>
                     <FormInput name="email" value={this.state.email} handleChange={this.handleChange} required label="email" />
 
-                    <FormInput name="password" value={this.state.password} handleChange={this.handleChange} required label="password"/>
+                    <FormInput type="password" name="password" value={this.state.password} handleChange={this.handleChange} required label="password"/>
 
                     <div className="buttons">
                         <Button type="submit">Sign In</Button>

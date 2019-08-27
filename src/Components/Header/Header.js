@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import {auth} from '../../Firebase/firebase.utils'
+import {auth} from '../../Firebase/FirebaseConfig'
 
 import { ReactComponent as Logo } from "../../assets/logo.svg";
 

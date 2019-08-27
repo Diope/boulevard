@@ -5,9 +5,9 @@ import './App.css';
 import HomePage from './Views/homepage';
 import ShoppingPage from './Views/Shopping/Shopping';
 import Header from './Components/Header/Header';
-import UserAccount from './Views/UserAccount/UserAccount';
+import UserReg from './Views/UserReg/UserReg';
 
-import {auth} from './Firebase/firebase.utils'
+import {auth, createUserProfile} from './Firebase/FirebaseConfig'
 
 class App extends Component {
   state = {
@@ -17,11 +17,19 @@ class App extends Component {
   unSubscribeFromAuth = null
 
   componentDidMount() {
-    this.unSubscribeFromAuth = auth.onAuthStateChanged(user => {
+    this.unSubscribeFromAuth = auth.onAuthStateChanged(async user => {
       if (user) {
-        this.setState({ currentUser: user})
-
-        console.log(user)
+        const userRef = await createUserProfile(user);
+        userRef.onSnapshot(snapshot => {
+          this.setState({
+            currentUser: {
+              id: snapshot.id,
+              ...snapshot.data()
+            }
+          });
+        })
+      } else {
+        this.setState({currentUser: user});
       }
     })
   }
@@ -37,7 +45,7 @@ class App extends Component {
         <Switch>
           <Route exact path="/" component={HomePage} />
           <Route path="/shop" component={ShoppingPage} />
-          <Route path="/signin" component={UserAccount} />
+          <Route path="/signin" component={UserReg} />
         </Switch>
       </div>
     );

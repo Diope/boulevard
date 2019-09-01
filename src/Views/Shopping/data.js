@@ -6,26 +6,26 @@ const SHOP_DATA = [
 		items: [
 			{
 				id: 1,
-				name: "Brown Brim",
-				imageUrl: "https://i.ibb.co/ZYW3VTp/brown-brim.png",
+				name: "Black Brim",
+				imageUrl: "https://images.unsplash.com/photo-1517502820012-ec45091f3ccd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80",
 				price: 25
 			},
 			{
 				id: 2,
-				name: "Blue Beanie",
-				imageUrl: "https://i.ibb.co/ypkgK0X/blue-beanie.png",
+				name: "Black Beanie",
+				imageUrl: "https://images.unsplash.com/photo-1482840927633-621e8149f04f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
 				price: 18
 			},
 			{
 				id: 3,
-				name: "Brown Cowboy",
-				imageUrl: "https://i.ibb.co/QdJwgmp/brown-cowboy.png",
+				name: "Straw Hat",
+				imageUrl: "https://images.unsplash.com/photo-1532262499329-9a77c088959a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
 				price: 35
 			},
 			{
 				id: 4,
 				name: "Grey Brim",
-				imageUrl: "https://i.ibb.co/RjBLWxB/grey-brim.png",
+				imageUrl: "https://images.unsplash.com/photo-1485675067348-b5ac01cfc282?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80",
 				price: 25
 			},
 			{
@@ -67,14 +67,14 @@ const SHOP_DATA = [
 		items: [
 			{
 				id: 10,
-				name: "Adidas NMD",
-				imageUrl: "https://i.ibb.co/0s3pdnc/adidas-nmd.png",
+				name: "Jordan",
+				imageUrl: "https://images.unsplash.com/photo-1489647767089-3944a3baa54e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
 				price: 220
 			},
 			{
 				id: 11,
 				name: "Adidas Yeezy",
-				imageUrl: "https://i.ibb.co/dJbG1cT/yeezy.png",
+				imageUrl: "https://images.unsplash.com/photo-1517720359744-6d12f8a09b10?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2167&q=80",
 				price: 280
 			},
 			{
@@ -85,8 +85,8 @@ const SHOP_DATA = [
 			},
 			{
 				id: 13,
-				name: "Nike White AirForce",
-				imageUrl: "https://i.ibb.co/1RcFPk0/white-nike-high-tops.png",
+				name: "Nike Dunks",
+				imageUrl: "https://images.unsplash.com/photo-1554203713-aa56c626d2fa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1300&q=80",
 				price: 160
 			},
 			{
@@ -128,8 +128,8 @@ const SHOP_DATA = [
 			},
 			{
 				id: 19,
-				name: "Blue Jean Jacket",
-				imageUrl: "https://i.ibb.co/mJS6vz0/blue-jean-jacket.png",
+				name: "Brown Leather Jacket",
+				imageUrl: "https://images.unsplash.com/photo-1487222477894-8943e31ef7b2?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
 				price: 90
 			},
 			{
@@ -214,14 +214,14 @@ const SHOP_DATA = [
 			},
 			{
 				id: 31,
-				name: "Floral T-shirt",
-				imageUrl: "https://i.ibb.co/qMQ75QZ/floral-shirt.png",
+				name: "Floral Longsleeve",
+				imageUrl: "https://images.unsplash.com/photo-1550773452-3356b8f185c6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
 				price: 20
 			},
 			{
 				id: 32,
-				name: "Black & White Longsleeve",
-				imageUrl: "https://i.ibb.co/55z32tw/long-sleeve.png",
+				name: "Black Longsleeve",
+				imageUrl: "https://images.unsplash.com/photo-1505632958218-4f23394784a6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1300&q=80",
 				price: 25
 			},
 			{

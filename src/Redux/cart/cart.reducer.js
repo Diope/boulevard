@@ -1,4 +1,4 @@
-import { TOGGLE_CART, ADD_ITEM } from "../actionTypes";
+import { TOGGLE_CART, ADD_ITEM, REMOVE_ITEM } from "../actionTypes";
 import { addItemToCart } from "./utils";
 
 
@@ -15,6 +15,12 @@ export const cartReducer = (state = initialState, { type, payload }) => {
 
     case ADD_ITEM:
         return {...state, cartItems: addItemToCart(state.cartItems, payload)}
+
+    case REMOVE_ITEM:
+        return {
+            ...state,
+            cartItems: state.cartItems.filter(cartItem => cartItem.id !== payload.id)
+        }
 
     default:
         return state

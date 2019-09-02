@@ -5,6 +5,7 @@ import './App.css';
 
 import HomePage from './Views/homepage';
 import ShoppingPage from './Views/Shopping/Shopping';
+import CheckoutPage from './Views/Checkout/Checkout';
 import Header from './Components/Header/Header';
 import UserReg from './Views/UserReg/UserReg';
 
@@ -49,6 +50,7 @@ class App extends Component {
           <Route exact path="/" component={HomePage} />
           <Route path="/shop" component={ShoppingPage} />
           <Route exact path="/signin" render={() => this.props.currentUser ? (<Redirect to="/" />) : (<UserReg />)} />
+          <Route exact path="/checkout" component={CheckoutPage} />
         </Switch>
       </div>
     );

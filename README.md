@@ -1,9 +1,15 @@
 <h1 align="center">Welcome to boulevard 👋</h1>
 <p>
-  <img src="https://img.shields.io/badge/version-0.1.0-blue.svg?cacheSeconds=2592000" />
+  <img src="https://img.shields.io/badge/version-0.8.0-blue.svg?cacheSeconds=2592000" />
 </p>
 
-> A pointless React/Redux project because hey I love coding
+![boulevard](https://i.imgur.com/GVeDAvj.png)
+
+> A pointless React/Redux project, no real end goal wanted to make something that allowed me to focus on redux. All the data is hardcoded and stored in the store, but the structure mimics what I think a typical online store would have theirs.
+
+Redux is used through, handling user auth, keeping track of items (both in cart and the number of items added). Much of this COULD have been handled with just React components but I like the challenge myself.
+
+### 🏠 [Homepage](https://boulevard.netlify.com/)
 
 ## Install
 
@@ -28,11 +34,8 @@ npm run test
 👤 **Dion Pettaway**
 
 * Twitter: [@SoMiskeen](https://twitter.com/SoMiskeen)
-* Github: [@diope](https://github.com/diope)
+* Github: [@Diope](https://github.com/Diope)
 
 ## Show your support
 
 Give a ⭐️ if this project helped you !
-
-***
-_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
